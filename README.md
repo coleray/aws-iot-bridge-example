@@ -41,7 +41,8 @@ To build from source, clone the latest version from master branch and compile th
 
 - Install dependencies
 
-        cd ~/ros-workspace && sudo apt-get update
+        sudo bash -c "echo \"yaml https://raw.githubusercontent.com/aws-robotics/aws-iot-bridge-example/master/aws_iot_mqtt_bridge/rosdep/mqtt-bridge.yaml\" > /etc/ros/rosdep/sources.list.d/30-mqtt-bridge.list"
+        cd ~/ros-workspace && sudo apt-get update && rosdep update
         rosdep install --from-paths src --ignore-src -r -y
 
 - Build the packages
